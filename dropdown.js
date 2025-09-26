@@ -16,4 +16,12 @@ function createDropDownMenu($parent) {
   }
   $container.appendChild($drop);
   $parent.appendChild($container);
+
+  $parent.addEventListener("click", () => {
+    if ($drop.getAttribute("hidden") !== null) {
+      $drop.removeAttribute("hidden");
+    } else {
+      $drop.setAttribute("hidden", "");
+    }
+  });
 }
